@@ -1,0 +1,213 @@
+.movie-header{
+  height: 80vh;
+  margin-bottom: 20px;
+  .movie-header-hero{
+    height: inherit;
+    overflow: hidden;
+    img{
+      height: auto;
+      width: 100%;
+      object-fit: cover;
+    }
+    .movie-header-hero-gradient{
+      width: 100%;
+      height: inherit;
+      background-image: linear-gradient(to left, rgba(255,0,0,0), $color-3);
+      position: absolute;
+      top: 0;
+    }
+  }
+
+  .movie-header-content{
+    position: absolute;
+    top: 0;
+    height: inherit;
+    width: 100%;
+    padding: 20px;
+    padding-top: 80px;
+    padding-bottom: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    .movie-header-poster{
+      width: auto;
+      height: 250px;
+
+      img{
+        height: inherit;
+        width: auto;
+        object-fit: cover;
+      }
+    }
+    .movie-header-title{
+      width: 30vw;
+      font-size: 22px;
+      h1{
+        font-size: inherit;
+        height: fit-content;
+        width: inherit;
+      }
+    }
+    .movie-header-date-vote{
+      font-size: 12px;
+      line-height: 1;
+      width: inherit;
+    }
+    .movie-header-overview{
+      font-size: 14px;
+      width: 30vw;
+    }
+  }
+}
+.movie-main{
+  padding: 20px;
+  .movie-main-recommendations {
+    height: 60vh;
+    width: 100%;
+
+    h3 {
+      font-size: calc(1vw + 1vh + 2vmin);
+      margin-bottom: 20px;
+    }
+
+    .card-wrapper {
+      max-width: 100%;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      //display: grid;
+      //grid-template-columns: repeat(3, 1fr);
+      //grid-gap: 10px;
+      height: fit-content;
+      overflow: auto;
+      display: flex;
+      @media screen and(max-width: 590px) {
+        grid-template-columns: 1fr;
+      }
+      a{
+        display: block;
+        min-width: 30%;
+        height: 50vh;
+        padding-right: 20px;
+        .card{
+          width: 100%;
+          background-color:  $color-4;
+          color:  $color-4;
+          border-radius: 0.5rem;
+          box-shadow: 0.05rem 0.1rem 0.3rem -0.03rem rgba(0, 0, 0, 0.45);
+          height: 50vh;
+          img {
+            border-radius: 0.5rem 0.5rem 0 0;
+            width: 100%;
+            object-fit: cover;
+            max-height: calc(10rem, 30vh);
+            aspect-ratio: 4/2;
+
+
+            ~ * {
+              margin-left: 1rem;
+              margin-right: 1rem;
+            }
+          }
+          > :last-child {
+            margin-bottom: 0;
+          }
+          h3 {
+            min-height: 22px;
+            height: fit-content;
+            line-height: 22px;
+            font-size: clamp(0.7rem, 1vw, 1.5rem);
+            @media screen and(max-width: 590px) {
+              min-height:32px;
+              height: fit-content;
+              line-height: 32px;
+              font-size: clamp(1.0rem, 2rem, 2rem);
+            }
+            text-align: left;
+            color:  $color-3;
+            text-transform: uppercase;
+          }
+          p{
+            color:  $color-3;
+            max-height:46px;
+            @media screen and(max-width: 590px) {
+              max-height:76px;
+            }
+            height: fit-content;
+            text-align: left;
+            font-size: 0.9rem;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+          }
+        }
+      }
+    }
+  }
+  .movie-main-cast{
+    height: 35vh;
+    width: 100%;
+    h3 {
+      font-size: calc(1vw + 1vh + 2vmin);
+      margin-bottom: 20px;
+    }
+    .card-wrapper {
+      max-width: 100%;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      //display: grid;
+      //grid-template-columns: repeat(3, 1fr);
+      //grid-gap: 10px;
+      height: fit-content;
+      overflow: auto;
+      display: flex;
+      @media screen and(max-width: 590px) {
+        grid-template-columns: 1fr;
+      }
+      .card{
+        display: block;
+        min-width: 21%;
+        height: 27vh;
+        overflow: hidden;
+        margin-right: 20px;
+        border-radius: 0.5rem 0.5rem;
+        background-color: rgba(253, 253, 253, 0.901558);
+        //filter: blur(1.5rem);
+        img {
+          border-radius: 0.5rem 0.5rem 0 0;
+          width: 100%;
+          object-fit: cover;
+          max-height: calc(10rem, 30vh);
+          aspect-ratio: 4/2;
+
+
+          ~ * {
+            margin-left: 1rem;
+            margin-right: 1rem;
+          }
+        }
+        div{
+          min-height: 22px;
+          height: fit-content;
+          line-height: 22px;
+          font-size: clamp(0.7rem, 1vw, 1.5rem);
+          @media screen and(max-width: 590px) {
+            min-height:32px;
+            height: fit-content;
+            line-height: 32px;
+            font-size: clamp(1.0rem, 2rem, 2rem);
+          }
+          text-align: left;
+          color:  $color-3;
+          text-transform: uppercase;
+        }
+        > :last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+  }
+}
