@@ -82,7 +82,7 @@
               border-radius: 0.5rem 0.5rem 0 0;
               width: 100%;
               object-fit: cover;
-              max-height: calc(10rem, 30vh);
+              max-height: calc(10rem - 30vh);
               aspect-ratio: 4/3;
               @media screen and(max-width: 590px) {
                 aspect-ratio: 4/2;
