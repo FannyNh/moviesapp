@@ -6,7 +6,7 @@ const SingleMovieCard = ({obj, id}) => {
     return (
         <Link to={{pathname: '/movie', state: obj}}>
             <li key={id} className="card" >
-                {obj.backdrop_path ? <img src={urlImg} alt='ccccc ddd'/> : null}
+                {obj.backdrop_path ? <img src={urlImg} alt=''/> : <img src="./assets/no-profil.png" alt=''/>}
                 <h3>{obj.title}</h3>
                 <p>{obj.overview}</p>
             </li>

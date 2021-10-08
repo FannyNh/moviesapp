@@ -5,8 +5,8 @@
     height: inherit;
     overflow: hidden;
     img{
-      height: auto;
-      width: 100%;
+      height: 100%;
+      width: 100%;;
       object-fit: cover;
     }
     .movie-header-hero-gradient{
@@ -15,6 +15,10 @@
       background-image: linear-gradient(to left, rgba(255,0,0,0), $color-3);
       position: absolute;
       top: 0;
+
+      @media screen and(max-width: 590px) {
+        background-image: linear-gradient(to left, rgba(255,0,0,0), $color-3, $color-3);
+      }
     }
   }
 
@@ -47,6 +51,12 @@
         height: fit-content;
         width: inherit;
       }
+      @media screen and(max-width: 1024px) {
+        width: 60vw;
+      }
+      @media screen and(max-width: 590px) {
+        width: 100vw;
+      }
     }
     .movie-header-date-vote{
       font-size: 12px;
@@ -56,6 +66,9 @@
     .movie-header-overview{
       font-size: 14px;
       width: 30vw;
+      @media screen and(max-width: 1024px) {
+        width: 60vw;
+      }
     }
   }
 }
@@ -64,7 +77,6 @@
   .movie-main-recommendations {
     height: 60vh;
     width: 100%;
-
     h3 {
       font-size: calc(1vw + 1vh + 2vmin);
       margin-bottom: 20px;
@@ -87,6 +99,7 @@
       a{
         display: block;
         min-width: 30%;
+        max-width: 500px;
         height: 50vh;
         padding-right: 20px;
         .card{
@@ -99,8 +112,10 @@
           img {
             border-radius: 0.5rem 0.5rem 0 0;
             width: 100%;
+
             object-fit: cover;
             max-height: calc(10rem, 30vh);
+
             aspect-ratio: 4/2;
 
 
@@ -174,14 +189,23 @@
         margin-right: 20px;
         border-radius: 0.5rem 0.5rem;
         background-color: rgba(253, 253, 253, 0.901558);
+        @media screen and(max-width: 1024px) {
+          min-width: 40vw;
+        }
+        @media screen and(max-width: 590px) {
+          min-width: 90vw;
+        }
         //filter: blur(1.5rem);
         img {
           border-radius: 0.5rem 0.5rem 0 0;
           width: 100%;
           object-fit: cover;
-          max-height: calc(10rem, 30vh);
+          max-height: 180px;
           aspect-ratio: 4/2;
+          @media screen and(max-width: 1024px) {
+            aspect-ratio: 4/4;
 
+          }
 
           ~ * {
             margin-left: 1rem;

@@ -39,10 +39,10 @@ const SingleMoviePage = () => {
                 </div>
             </div>
             <div className="movie-main">
-                <div className="movie-main-recommendations">
-                    <h3>SUGGESTED</h3>
-                    <ListCards moviesData={movieData}/>
-                </div>
+
+                    {movieData.length > 1 && <><div className="movie-main-recommendations"><h3>SUGGESTED</h3>
+                        <ListCards moviesData={movieData}/> </div></>}
+
                 <div className="movie-main-cast">
                     <h3>CASTINGS</h3>
                     <CastList movieId={location.state.id}/>

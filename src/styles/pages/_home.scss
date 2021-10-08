@@ -5,11 +5,7 @@
   margin: auto;
   position: relative;
   top: 130px;
-  //
-  //@media screen and(max-width: 990px) {
-  //  grid-template-columns: 60px 1fr;
-  //  margin: 58px 20px 50px;
-  //}
+
 
   @media screen and(max-width: 590px) {
     grid-template-columns: 1fr;
@@ -62,6 +58,9 @@
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 10px;
         height: fit-content;
+        @media screen and(max-width: 1024px) {
+          grid-template-columns: repeat(2, 1fr);
+        }
         @media screen and(max-width: 590px) {
           grid-template-columns: 1fr;
         }

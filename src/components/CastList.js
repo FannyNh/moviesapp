@@ -14,8 +14,7 @@ const CastList = ({movieId}) => {
             {movieCast && movieCast.map((cast,index) => {
                     return (
                         <div key={index} className="card">
-                            {cast.profile_path ? <img src={`https://www.themoviedb.org/t/p/w500/${cast.profile_path}`}
-                                                      alt={`the actor ${cast.name}}`}/> : null}
+                            {cast.profile_path ? <img src={`https://www.themoviedb.org/t/p/w500/${cast.profile_path}`} alt={`the actor ${cast.name}}`}/> :  <img src="./assets/no-profil.png" alt=''/>}
                             <div>{cast.name}</div>
                         </div>
                     )
