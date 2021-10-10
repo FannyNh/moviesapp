@@ -1,6 +1,7 @@
 # Movie app & Test ADSERVIO
 
-An web app used to filter data tmdb, built with React, Redux, JavaScript, and SCSS.
+A web app used to filter data tmdb, built with React, Redux, JavaScript, and SCSS.
+You can test it live here https://moviesapp-bay.vercel.app/
 
 # INSTALLATION & SETUP
 
