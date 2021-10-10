@@ -1,9 +1,0 @@
-{
-  "redirects": [
-    {
-      "source": "/api.themoviedb.org/3/search/movie/(.*)",
-      "destination": "/api.themoviedb.org/3/search/movie(.*)",
-      "permanent": true
-    }
-  ]
-}
